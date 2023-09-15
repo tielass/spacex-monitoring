@@ -91,11 +91,16 @@ function Body() {
                 <p>Launch Date - {launch.date_local}</p>
                 <p>{launch.details}</p>
               </div>
-            <div className="launch-details-container">
-              <div >
-                <img className="launch-img" src={launch.links.flickr.original[1]} alt="" />
+              <div className="launch-details-container">
+                <div>
+                  {launch.links.flickr.original[1] ? (
+                    <img className="launch-img" src={launch.links.flickr.original[1]} alt="" />
+                  ) : (
+                    <img className="launch-img" src="https://live.staticflickr.com/65535/50428228397_6151927733_o.jpg" alt="Default" />
+                  )}
+                </div>
               </div>
-            </div>
+
             <div className="bottom-row">
               {rocketData.map((rocket) => {
                 if(rocket.id === launch.rocket) {

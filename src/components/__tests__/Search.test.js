@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import SearchBar from '../SearchBar';
+import SearchBar from '../Search';
 
-test('SearchBar component should work correctly', () => {
+test('SearchBar component should work properly', () => {
   const mockOnSearch = jest.fn();
 
   render(<SearchBar onSearch={mockOnSearch} />);
@@ -10,13 +10,13 @@ test('SearchBar component should work correctly', () => {
   const inputElement = screen.getByPlaceholderText('Search...');
   const buttonElement = screen.getByText('SEARCH');
 
-  fireEvent.change(inputElement, { target: { value: 'TestQuery' } });
+  fireEvent.change(inputElement, { target: { value: 'Search test' } });
 
-  expect(inputElement.value).toBe('TestQuery');
+  expect(inputElement.value).toBe('Search test');
 
   fireEvent.click(buttonElement);
 
-  expect(mockOnSearch).toHaveBeenCalledWith('TestQuery');
+  expect(mockOnSearch).toHaveBeenCalledWith('Search test');
 
   expect(inputElement.value).toBe('');
 });
