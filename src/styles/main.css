@@ -1,0 +1,28 @@
+.main{
+  margin: 2rem 4rem;
+}
+
+.launch-container {
+  border-bottom: 1px solid #ccc;
+
+}
+
+.launch-details-container {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.launch-img {
+  width: 350px;
+}
+
+.launch-name{
+  font-size: 2rem;
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}

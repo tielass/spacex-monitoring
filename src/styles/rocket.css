@@ -1,0 +1,9 @@
+.rocket-details-container{
+  display: flex;
+
+}
+
+.rocket-desc{
+  margin: 0;
+  font-size: 16px;
+}
